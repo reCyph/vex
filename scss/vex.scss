@@ -1,4 +1,4 @@
-@import "compass/css3";
+@import "bourbon";
 
 @import "mixins";
 @import "keyframes";
@@ -10,7 +10,7 @@
 @include keyframes-vex-rotation;
 
 .vex, .vex *, .vex *:before, .vex *:after {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 .vex {
@@ -68,7 +68,7 @@
 
 .vex-loading-spinner {
   @include vex-animation(vex-rotation 0.7s linear infinite);
-  @include box-shadow(0 0 1em rgba(0, 0, 0, 0.1));
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
   position: fixed;
   z-index: 1112;
   margin: auto;

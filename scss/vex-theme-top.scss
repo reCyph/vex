@@ -1,6 +1,3 @@
-@import "compass/css3";
-@import "compass/utilities/general/clearfix";
-
 @import "mixins";
 @import "keyframes";
 
@@ -20,7 +17,7 @@ $blue: #3288e6;
     @include vex-animation(vex-dropin 0.5s);
   }
   .vex-content {
-    @include border-radius(0 0 5px 5px);
+    border-radius: 0 0 5px 5px;
     font-family: "Helvetica Neue", sans-serif;
     background: #f0f0f0;
     color: #444444;
@@ -36,13 +33,13 @@ $blue: #3288e6;
     }
   }
   .vex-close {
-    @include border-radius(5px);
+    border-radius: 5px;
     position: absolute;
     top: 0;
     right: 0;
     cursor: pointer;
     &:before {
-      @include border-radius(3px);
+      border-radius: 3px;
       position: absolute;
       content: "\00D7";
       font-size: 26px;
@@ -68,7 +65,7 @@ $blue: #3288e6;
     .vex-dialog-input {
       margin-bottom: 1em;
       textarea, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
-        @include border-radius(3px);
+        border-radius: 3px;
         background: white;
         width: 100%;
         padding: 0.25em 0.67em;
@@ -79,17 +76,17 @@ $blue: #3288e6;
         min-height: 2.5em;
         margin: 0 0 0.25em;
         &:focus {
-          @include box-shadow(inset 0 0 0 2px lighten($blue, 20%));
+          box-shadow: inset 0 0 0 2px lighten($blue, 20%);
           outline: none;
         }
       }
     }
     .vex-dialog-buttons {
-      @include pie-clearfix;
+      @extend .clearfix;
     }
   }
   .vex-dialog-button {
-    @include border-radius(3px);
+    border-radius: 3px;
     border: 0;
     float: right;
     margin: 0 0 0 0.5em;
@@ -123,8 +120,8 @@ $blue: #3288e6;
 }
 
 .vex-loading-spinner.vex-theme-top {
-  @include box-shadow(0 0 0 0.5em #f0f0f0, 0 0 1px 0.5em rgba(0, 0, 0, 0.3));
-  @include border-radius(100%);
+  box-shadow: 0 0 0 0.5em #f0f0f0, 0 0 1px 0.5em rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
   background: #f0f0f0;
   border: 0.2em solid transparent;
   border-top-color: #bbbbbb;
